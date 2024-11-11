@@ -1,0 +1,150 @@
+SyncSlide 
+SyncSlide is a real-time PDF co-viewer application that enables presenters to synchronously share PDF presentations with multiple viewers. Perfect for remote presentations, online teaching, and collaborative document viewing.
+Show Image
+Show Image
+ Features
+
+Real-time Synchronization: All viewers stay on the same page as the presenter
+Automatic Presenter Mode: First user becomes the presenter automatically
+Presenter Failover: If presenter disconnects, role transfers to next available user
+Responsive Design: Works seamlessly on desktop and mobile devices
+Simple Interface: Clean, intuitive UI for both presenters and viewers
+No Login Required: Just share the URL and start presenting
+PDF.js Integration: High-quality PDF rendering across all browsers
+
+ Technologies Used
+
+Frontend:
+
+HTML5 & CSS3
+JavaScript (ES6+)
+PDF.js for PDF rendering
+Tailwind CSS for styling
+WebSocket for real-time communication
+
+
+Backend:
+
+Node.js
+Express.js
+ws (WebSocket library)
+
+
+
+ Installation & Setup
+Prerequisites
+
+Node.js (v14.0.0 or higher)
+npm (comes with Node.js)
+Git
+
+Local Development Setup
+
+Clone the repository
+
+bashCopygit clone https://github.com/yourusername/syncslide.git
+cd syncslide
+
+Install dependencies
+
+bashCopynpm install
+
+Start the development server
+
+bashCopynpm start
+
+Open your browser and navigate to http://localhost:3000
+
+Running with Docker
+bashCopy# Build the Docker image
+docker build -t syncslide .
+
+# Run the container
+docker run -p 3000:3000 syncslide
+ Usage
+
+Open the application in your browser
+First user automatically becomes the presenter
+Upload a PDF file using the "Select PDF" button
+Share the URL with viewers
+Navigate through the PDF using the Previous/Next buttons (Presenter only)
+All viewers will automatically follow the presenter's current page
+
+ Security Considerations
+
+The application currently doesn't implement authentication
+Files are not stored on the server, they're loaded in the browser
+WebSocket connections are currently unencrypted in development
+
+ Future Scope
+Planned Features
+
+Authentication & Authorization
+
+User accounts
+Custom room creation
+Presenter password protection
+Multiple presenter support
+
+
+Enhanced Presentation Features
+
+Laser pointer tool
+Drawing/annotation tools
+Presentation timer
+Thumbnail navigation
+Presentation notes
+
+
+File Management
+
+Support for multiple file formats (PPT, PPTX)
+Cloud storage integration
+Recent files history
+File preloading
+
+
+Collaboration Features
+
+Chat functionality
+Raise hand feature
+Q&A session support
+Viewer count and list
+Breakout rooms
+
+
+Analytics & Insights
+
+Viewer engagement metrics
+Time spent per slide
+Attendance tracking
+Heat maps for viewer attention
+
+
+Technical Improvements
+
+End-to-end encryption
+Offline support
+Performance optimizations
+Mobile apps
+API for third-party integration
+
+
+
+ Contributing
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+Fork the repository
+Create your feature branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+
+ License
+This project is licensed under the MIT License - see the LICENSE file for details.
+ Acknowledgments
+
+PDF.js by Mozilla
+Tailwind CSS
+ws
+All contributors and supporters of the project

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Co-Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold text-gray-800">PDF Co-Viewer</h1>
+                <div id="adminStatus" class="hidden text-green-600 font-semibold">
+                    (Presenter Mode)
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <input type="file" id="fileInput" accept="application/pdf" class="hidden">
+                <button onclick="document.getElementById('fileInput').click()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Select PDF
+                </button>
+            </div>
+
+            <div class="flex justify-center mb-4">
+                <button id="prevPage" class="bg-gray-200 px-4 py-2 rounded-l hover:bg-gray-300 disabled:opacity-50">Previous</button>
+                <span id="pageInfo" class="bg-gray-100 px-4 py-2">Page: 1</span>
+                <button id="nextPage" class="bg-gray-200 px-4 py-2 rounded-r hover:bg-gray-300 disabled:opacity-50">Next</button>
+            </div>
+
+            <canvas id="pdfViewer" class="mx-auto border border-gray-300"></canvas>
+        </div>
+    </div>
+
+    <script src="client.js"></script>
+</body>
+</html>

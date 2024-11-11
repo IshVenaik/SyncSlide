@@ -1,0 +1,24 @@
+canvas {
+    max-width: 100%;
+    height: auto !important;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#pdfViewer {
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    #pdfViewer {
+        width: 100% !important;
+    }
+}
